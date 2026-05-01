@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scoreva Classes - Expert CBSE tutoring for Classes 6-12 in New Ashok Nagar, Delhi. Mathematics, Science, and Physics coaching with proven results.">
+    <title>Scoreva Classes - CBSE Tutoring Delhi | Class 6-12 | Maths, Science, Physics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0f1820 0%, #1a2f42 50%, #0f1820 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .tagline {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+        
+        .header .location {
+            font-size: 1.1em;
+            margin-bottom: 35px;
+            color: #FFD700;
+            font-weight: 500;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #0f1820;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            margin: 80px 0;
+        }
+        
+        .section h2 {
+            color: #0f1820;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 4px solid #FFD700;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            color: #0f1820;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .subjects {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .subject-card {
+            background: white;
+            padding: 25px;
+            border-left: 5px solid #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .subject-card:hover {
+            border-left-color: #FFA500;
+            transform: translateX(5px);
+        }
+        
+        .subject-card h3 {
+            color: #0f1820;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .subject-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .results {
+            background: linear-gradient(135deg, #0f1820 0%, #1a2f42 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 80px 0;
+        }
+        
+        .results h2 {
+            color: #FFD700;
+        }
+        
+        .results h2::after {
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .stat-box {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #0f1820 0%, #1a2f42 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: #FFD700;
+            margin-bottom: 40px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .contact-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item h3 {
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .contact-item p {
+            font-size: 1.1em;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #FFD700;
+        }
+        
+        .footer {
+            background: #0a0f14;
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header .tagline {
+                font-size: 1.1em;
+            }
+            
+            .section h2 {
+                font-size: 2em;
+            }
+            
+            .stat-number {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>SCOREVA CLASSES</h1>
+            <p class="tagline">Transform Your Academic Journey</p>
+            <p class="location">📍 New Ashok Nagar, Delhi | CBSE Classes 6-12</p>
+            <a href="#contact" class="cta-button">Book Free Demo Class</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Why Choose Scoreva Classes?</h2>
+            <p class="section-subtitle">Excellence in Education, Proven Results</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Proven Track Record</h3>
+                    <p>5+ years of teaching experience with consistent high scores. Produced district board topper and multiple 90+ achievers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Expert Faculty</h3>
+                    <p>B.Sc. in Physics, Chemistry & Mathematics from MJPRU Bareilly. Former PGT Physics Teacher at National Inter College.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>CBSE Specialized</h3>
+                    <p>Curriculum aligned with latest NCERT 2025-26 syllabus. Board exam focused approach with comprehensive study material.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Personal Attention</h3>
+                    <p>Small batch sizes ensuring individual focus. Interactive sessions with dedicated doubt clearing and regular assessments.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Subjects We Teach</h2>
+            <p class="section-subtitle">Comprehensive CBSE Curriculum Coverage</p>
+            
+            <div class="subjects">
+                <div class="subjects-grid">
+                    <div class="subject-card">
+                        <h3>Class 6-8</h3>
+                        <p><strong>All Subjects:</strong> Mathematics, Science, English, Hindi, Social Studies. Complete foundation building with conceptual clarity.</p>
+                    </div>
+                    
+                    <div class="subject-card">
+                        <h3>Class 9-10</h3>
+                        <p><strong>Maths & Science:</strong> Physics, Chemistry, Biology, Mathematics. Board exam preparation with previous year papers and practice tests.</p>
+                    </div>
+                    
+                    <div class="subject-card">
+                        <h3>Class 11-12</h3>
+                        <p><strong>Physics (Specialized):</strong> In-depth physics coaching for JEE/NEET aspirants and board students. Advanced problem solving.</p>
+                    </div>
+                    
+                    <div class="subject-card">
+                        <h3>Board Exam Special</h3>
+                        <p>Intensive revision programs, sample papers, mock tests, exam strategies, time management techniques, and mark-scoring tips.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <section class="results">
+        <div class="container">
+            <h2>Our Success Speaks</h2>
+            <p class="section-subtitle" style="color: #e0e0e0;">Numbers That Matter</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Students Taught</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-number">90%+</div>
+                    <div class="stat-label">Students Score Above 75%</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-number">#1</div>
+                    <div class="stat-label">District Board Topper</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get Started Today</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px; color: #e0e0e0;">Book Your Free Demo Class Now</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>New Ashok Nagar<br>Delhi - 110096</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+919999999999">+91 99999 99999</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:scorevaclasses@gmail.com">scorevaclasses@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <a href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20book%20a%20free%20demo%20class%20at%20Scoreva%20Classes" 
+                   class="cta-button" 
+                   target="_blank" 
+                   style="background: #25D366;">
+                    💬 WhatsApp: Book Demo Class
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2026 Scoreva Classes. All rights reserved. | Empowering Students Since 2020</p>
+    </footer>
+</body>
+</html>
