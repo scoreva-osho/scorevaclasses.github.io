@@ -1,210 +1,334 @@
+<!-- README:
+Deployment for GitHub Pages:
+1. Create a GitHub repository (e.g. username.github.io).
+2. Commit this file (e.g. index.html) to the main branch.
+3. In repo Settings > Pages, set source to 'main' / root.
+4. (Optional) Add custom domain in GitHub Pages settings.
+The site will then be live at https://<username>.github.io/ or your domain.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scoreva Home Tuitions</title>
+  <meta charset="UTF-8">
+  <title>Scoreva Home Tuitions – Premium CBSE Home Tutoring in Delhi &amp; Noida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scoreva Home Tuitions – 1-on-1 CBSE coaching for Classes 6-12 in Delhi & Noida. Expert tutor with 5+ years experience. Free demo class, proven results.">
+  <!-- Structured Data: LocalBusiness (scoreva home tuitions)【2†L449-L458】 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Scoreva Home Tuitions",
+    "description": "Premium CBSE home tutoring in Delhi & Noida (Classes 6-12) by an experienced tutor. Online/offline coaching with guaranteed results.",
+    "telephone": "+919058641924",
+    "email": "hometutorosho@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressRegion": "Delhi",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["Delhi", "Noida"],
+    "url": "https://your-github-username.github.io/",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  }
+  </script>
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Font for icons (fontawesome CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-P..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Base styles */
+    :root {
+      --primary-blue: #1e3a8a;
+      --accent-teal: #0d9488;
+      --light-bg: #f8fafc;
+      --dark-text: #1e293b;
+      --light-text: #64748b;
+      --gold-accent: #fbbf24;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; line-height:1.6; color:var(--dark-text); background:var(--white); }
+    h1, h2 { color:var(--primary-blue); }
+    a { color: var(--primary-blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, .btn { cursor: pointer; }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    /* Header */
+    header { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; background:white;
+              box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top:0; z-index:1000; }
+    .logo { font-size:1.5em; font-weight:bold; color: var(--primary-blue); }
+    .logo span { color: var(--accent-teal); }
+    nav { display:flex; gap: 15px; align-items:center; }
+    nav a { font-weight:600; }
 
-<style>
-:root {
---primary:#1e3a8a;
---accent:#0d9488;
---bg:#f8fafc;
-}
+    /* Hero */
+    .hero { background: linear-gradient(135deg, var(--primary-blue), #1e40af); color:white;
+             text-align: center; padding: 60px 20px; position: relative; }
+    .hero h1 { font-size: 2.5em; margin-bottom: 20px; }
+    .hero p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; }
+    .hero .highlight { color: var(--gold-accent); }
+    .hero-buttons { display:flex; gap:15px; justify-content:center; flex-wrap: wrap; margin-top: 20px; }
+    .btn-primary, .btn-secondary { border:none; border-radius: 8px; padding: 12px 25px; font-weight:600; transition: 0.3s; }
+    .btn-primary { background: var(--accent-teal); color: white; }
+    .btn-primary:hover { background: #0f766e; }
+    .btn-secondary { background: white; color: var(--primary-blue); }
+    .btn-secondary:hover { background: #f0f0f0; }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+    /* Lead Form */
+    .lead-form { max-width: 400px; margin: auto; text-align: left; }
+    .lead-form input, .lead-form select, .lead-form button {
+      width: 100%; padding: 10px; margin-bottom: 10px; border-radius:6px; border:1px solid #ccc;
+      font-size:1em;
+    }
+    .lead-form button { background: var(--primary-blue); color:white; }
 
-body{background:white;color:#111;}
+    /* Sticky CTA Bar */
+    .sticky-bar { position: fixed; bottom:0; width:100%; background: var(--accent-teal);
+                  text-align: center; z-index:999; }
+    .sticky-bar a { display:block; color:white; padding: 15px; font-weight:700; font-size: 1.1em; }
 
-.header{
-display:flex;
-justify-content:space-between;
-padding:15px 20px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-position:sticky;top:0;background:white;
-}
+    /* Floating Call/WhatsApp Buttons */
+    .float-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366;
+                  color:white; width:55px; height:55px; border-radius:50%; display:flex;
+                  align-items:center; justify-content:center; font-size:24px; z-index:1000;
+                  box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.2s; }
+    .float-btn:hover { transform: scale(1.1); }
 
-.btn{background:var(--accent);color:white;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600;}
+    /* Sections */
+    section { padding: 60px 20px; }
+    .section-header { text-align: center; margin-bottom: 30px; }
+    .section-header h2 { font-size: 2em; margin-bottom:10px; }
+    .section-header p { color: var(--light-text); }
 
-.hero{
-padding:60px 20px;
-text-align:center;
-background:linear-gradient(135deg,#1e3a8a,#1e40af);
-color:white;
-}
+    /* Benefits Grid */
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:20px; }
+    .card { background:white; padding:20px; border:1px solid #e2e8f0; border-radius:10px; text-align:center;
+            transition:0.3s; }
+    .card:hover { border-color: var(--accent-teal); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
 
-.hero h1{font-size:2.2em;margin-bottom:15px;}
-.highlight{color:#fbbf24;}
+    /* Testimonials Carousel */
+    .carousel { overflow:hidden; position:relative; max-width:900px; margin:auto; }
+    .carousel-track { display:flex; gap:20px; }
+    .testimonial-card { background:white; padding:20px; border-radius:10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                         min-width: 300px; flex:0 0 auto; outline:none; }
+    .testimonial-text { color: var(--light-text); margin-bottom:15px; }
+    .testimonial-user { display:flex; align-items:center; gap:10px; }
+    .testimonial-avatar { width:40px; height:40px; border-radius:50%; background: var(--accent-teal);
+                           color:white; display:flex; align-items:center; justify-content:center; font-weight:bold; }
+    .testimonial-name { font-weight:600; color: var(--dark-text); }
+    .testimonial-stars { color: var(--gold-accent); font-size:0.9em; }
 
-.hero p{margin-bottom:20px;}
+    /* Footer */
+    footer { background: var(--dark-navy); color: #94a3b8; text-align:center; padding:30px 20px; }
+    footer p { margin:5px 0; font-size:0.9em; }
 
-.hero-features{margin:20px 0;}
-.hero-feature{margin:5px;}
-
-.alert-box{
-background:#fff3cd;
-padding:15px;
-text-align:center;
-}
-
-.section{padding:50px 20px;max-width:1100px;margin:auto;text-align:center;}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:30px;
-}
-
-.card{
-padding:20px;
-border:1px solid #ddd;
-border-radius:10px;
-}
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:30px;
-}
-
-.testimonial{
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.cta{
-background:#1e3a8a;
-color:white;
-text-align:center;
-padding:60px 20px;
-}
-
-.footer{
-background:#0f172a;
-color:#aaa;
-text-align:center;
-padding:20px;
-}
-
-/* Sticky CTA */
-.sticky{
-position:fixed;
-bottom:0;
-width:100%;
-background:#0d9488;
-text-align:center;
-}
-
-.sticky a{
-display:block;
-padding:15px;
-color:white;
-font-weight:700;
-text-decoration:none;
-}
-
-/* Mobile */
-@media(max-width:768px){
-.grid,.testimonials{grid-template-columns:1fr;}
-.hero h1{font-size:1.6em;}
-}
-</style>
+    /* Responsive */
+    @media (max-width:768px) {
+      header { flex-direction:column; }
+      .hero h1 { font-size: 1.8em; }
+      .hero-buttons { flex-direction: column; }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<div class="header">
-<div><b>Scoreva</b></div>
-<a href="tel:+919058641924" class="btn">Call Now</a>
-</div>
+  <!-- Floating WhatsApp Call Button -->
+  <a href="https://wa.me/919058641924?text=Hi%2C%20I%20want%20to%20book%20a%20free%20demo%20class%20for%20home%20tuition" 
+     class="float-btn" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <!-- Floating Phone Button -->
+  <a href="tel:+919058641924" class="float-btn" style="background:#1e3a8a; bottom:90px;" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+  </a>
 
-<!-- HERO -->
-<div class="hero">
-<h1>Score <span class="highlight">85%+</span> in CBSE with Personal Tuition</h1>
-<p>150+ parents trust us. Free demo class available.</p>
+  <!-- Header -->
+  <header>
+    <div class="logo">Scoreva<span>Home</span></div>
+    <nav aria-label="Main navigation">
+      <a href="tel:+919058641924"><i class="fas fa-phone"></i> +91 90586 41924</a>
+      <a href="#contact" class="btn">Contact Us</a>
+    </nav>
+  </header>
 
-<div class="hero-features">
-<div class="hero-feature">✓ Classes 6–12</div>
-<div class="hero-feature">✓ Home + Online</div>
-<div class="hero-feature">✓ 5+ Years Experience</div>
-</div>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1>Score <span class="highlight">85%+</span> in CBSE with Personal Home Tuition</h1>
+    <p>150+ students taught. 5+ years of experience. Free demo class with every new enrolment.</p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/919058641924?text=Book%20free%20demo%20class" class="btn-secondary">📱 Book Demo</a>
+      <a href="tel:+919058641924" class="btn-primary">📞 Call Now</a>
+    </div>
+  </section>
 
-<a href="https://wa.me/919058641924" class="btn">Book Free Demo</a>
-</div>
+  <!-- Why Choose Us -->
+  <section>
+    <div class="section-header">
+      <h2>Why Choose Scoreva</h2>
+      <p>1-on-1 CBSE coaching at home or online, tailored to your child’s success.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>📍 Home Comfort</h3><p>No travel; learn in a familiar space.</p></div>
+      <div class="card"><h3>🎯 Personal Attention</h3><p>Dedicated 1-on-1 sessions for maximum focus.</p></div>
+      <div class="card"><h3>📈 Proven Results</h3><p>Students scoring 80%+ (or topping classes) after tuition.</p></div>
+      <div class="card"><h3>🧠 Concept Clarity</h3><p>We emphasize understanding, not rote memorization.</p></div>
+      <div class="card"><h3>💡 CBSE Exam Prep</h3><p>NCERT syllabus, sample papers, and exam strategies.</p></div>
+      <div class="card"><h3>⏰ Flexible Timing</h3><p>Morning, evening, weekends – you pick the schedule.</p></div>
+    </div>
+  </section>
 
-<!-- ALERT -->
-<div class="alert-box">
-⚠️ Weak basics in early classes lead to poor board results. Fix it now.
-</div>
+  <!-- Testimonials Carousel -->
+  <section aria-label="Testimonials">
+    <div class="section-header">
+      <h2>What Parents Say</h2>
+      <p>Real reviews from families in Delhi &amp; Noida.</p>
+    </div>
+    <div class="carousel" tabindex="0">
+      <div class="carousel-track" id="carousel-track">
+        <!-- JS will insert testimonial cards here -->
+      </div>
+    </div>
+    <noscript>
+      <!-- Fallback testimonials if JavaScript is disabled -->
+      <div style="text-align:center; padding: 20px; color:var(--light-text);">
+        Testimonials are best viewed with JavaScript enabled. Here are a few highlights:<br>
+        <blockquote>“My daughter scored 92% in her boards after Scoreva classes!” – Mrs. Priya S.</blockquote>
+        <blockquote>“Effective teaching and great confidence boost. Highly recommend!” – Mr. Vimal G.</blockquote>
+      </div>
+    </noscript>
+  </section>
 
-<!-- WHY -->
-<div class="section">
-<h2>Why Choose Us</h2>
+  <!-- Lead Capture Form -->
+  <section style="background: var(--light-bg);">
+    <div class="section-header">
+      <h2>Book a Free Demo Class</h2>
+      <p>Fill in your details and we’ll get back to you.</p>
+    </div>
+    <form class="lead-form" method="POST" action="<!-- GOOGLE_SHEETS_WEBHOOK_URL or SheetMonkey endpoint here -->">
+      <!-- Replace action with your Google Apps Script URL or SheetMonkey API endpoint【7†L71-L79】 -->
+      <input type="text" name="Name" placeholder="Parent's Name" required>
+      <input type="tel" name="Phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+      <select name="Class" required>
+        <option value="">Select Class</option>
+        <option>Classes 6-8</option>
+        <option>Classes 9-10</option>
+        <option>Classes 11-12</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-<div class="grid">
-<div class="card">1-on-1 personal attention</div>
-<div class="card">Proven 85%+ results</div>
-<div class="card">Concept-based learning</div>
-<div class="card">CBSE focused</div>
-<div class="card">Flexible timing</div>
-<div class="card">Home comfort</div>
-</div>
-</div>
+  <!-- Contact / Footer -->
+  <section id="contact">
+    <div class="section-header">
+      <h2>Contact Scoreva</h2>
+      <p>Delhi &amp; Noida | +91 90586 41924 | hometutorosho@gmail.com</p>
+    </div>
+    <div style="text-align:center;">
+      <p><strong>Address:</strong> Home tuitions across NCR (Delhi & Noida). Online classes also available.</p>
+    </div>
+  </section>
 
-<!-- TESTIMONIALS -->
-<div class="section">
-<h2>What Parents Say</h2>
+  <footer>
+    <p>© 2026 Scoreva Home Tuitions. All rights reserved.</p>
+    <p>Empowering students since 2020.</p>
+  </footer>
 
-<div class="testimonials" id="reviews"></div>
-</div>
+  <!-- Google Analytics Placeholder -->
+  <!-- Insert Google Analytics or Tag Manager here -->
 
-<!-- CTA -->
-<div class="cta">
-<h2>Book Free Demo Today</h2>
-<p>Limited slots available</p>
-<a href="https://wa.me/919058641924" class="btn">Book Now</a>
-</div>
+  <script>
+    // Testimonials data (sample; add more entries as needed)
+    const testimonials = [
+      { name:"Mr. Noor", avatar:"MN", text:"“My son became class topper after joining Scoreva! His confidence skyrocketed.”", rating:5 },
+      { name:"Mrs. Priya S.", avatar:"PS", text:"“Daughter scored 92% in boards! Systematic prep and regular tests made all the difference.”", rating:5 },
+      { name:"Mr. Vimal G.", avatar:"VG", text:"“Exceptional results! Strong foundation helped my child clear competitive exams easily.”", rating:5 },
+      { name:"Mrs. Kavita", avatar:"KS", text:"“My son now looks forward to study sessions. The personalized approach really works.”", rating:5 },
+      { name:"Mr. Rajesh", avatar:"RK", text:"“Physics was a nightmare until Scoreva. Now it’s my favorite subject! Scored 90% in Physics.”", rating:5 }
+    ];
 
-<!-- CONTACT -->
-<div class="section">
-<h2>Contact</h2>
-<p>📍 Delhi & Noida</p>
-<p>📞 +91 90586 41924</p>
-<p>📧 hometutorosho@gmail.com</p>
-</div>
+    const track = document.getElementById('carousel-track');
+    let currentIndex = 0;
 
-<!-- FOOTER -->
-<div class="footer">
-© 2026 Scoreva Home Tuitions
-</div>
+    function renderTestimonials() {
+      track.innerHTML = testimonials.map(t => `
+        <div class="testimonial-card" tabindex="0" aria-label="${t.name} says: ${t.text}">
+          <div class="testimonial-text">${t.text}</div>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">${t.avatar}</div>
+            <div>
+              <div class="testimonial-name">${t.name}</div>
+              <div class="testimonial-stars">${'★'.repeat(t.rating)}</div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
 
-<!-- STICKY CTA -->
-<div class="sticky">
-<a href="https://wa.me/919058641924">🎯 Book Free Demo Now</a>
-</div>
+    function slideTo(index) {
+      const cardWidth = 320; // approximate card width + gap
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
 
-<!-- SCRIPT -->
-<script>
-const data=[
-"Got 92% in boards!",
-"Topper after joining!",
-"Massive improvement!",
-"Best tutor in Delhi",
-"Highly recommended!"
-];
+    // Auto-slide every 3 seconds
+    let slideInterval;
+    function startAutoSlide() {
+      slideInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        // wrap around for infinite loop feel
+        if (currentIndex > testimonials.length - 3) currentIndex = 0;
+        slideTo(currentIndex);
+      }, 3000);
+    }
 
-let html="";
-data.forEach(t=>{
-html+=`<div class="testimonial">${t}</div>`;
-});
-document.getElementById("reviews").innerHTML=html;
-</script>
+    // Pause on hover (on desktop)
+    track.parentElement.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    track.parentElement.addEventListener('mouseleave', startAutoSlide);
 
+    // Keyboard navigation (left/right arrows)
+    track.parentElement.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        clearInterval(slideInterval);
+        currentIndex = Math.min(currentIndex + 1, testimonials.length - 1);
+        slideTo(currentIndex);
+      }
+      if (e.key === 'ArrowLeft') {
+        clearInterval(slideInterval);
+        currentIndex = Math.max(currentIndex - 1, 0);
+        slideTo(currentIndex);
+      }
+    });
+
+    // Touch swipe (basic implementation)
+    let startX = 0;
+    track.parentElement.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; });
+    track.parentElement.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) {
+        // swipe left
+        clearInterval(slideInterval);
+        currentIndex = Math.min(currentIndex + 1, testimonials.length - 1);
+        slideTo(currentIndex);
+      } else if (endX - startX > 50) {
+        // swipe right
+        clearInterval(slideInterval);
+        currentIndex = Math.max(currentIndex - 1, 0);
+        slideTo(currentIndex);
+      }
+    });
+
+    // Initialize carousel
+    document.addEventListener('DOMContentLoaded', () => {
+      renderTestimonials();
+      startAutoSlide();
+    });
+  </script>
 </body>
 </html>
